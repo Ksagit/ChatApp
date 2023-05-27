@@ -1,0 +1,28 @@
+stages:
+  - build
+
+job1:
+  stage: build
+  image: gradle:8.1.1-jdk17
+  script:
+    - chmod +x gradlew
+    - ./gradlew buildFatJar
+  artifacts:
+    paths:
+      - ./build/libs/*.jar
+  tags:
+    - shell
+  when: always
+
+job2:
+  stage: build
+  image: gradle:8.1.1-jdk17
+  script:
+    - chmod +x gradlew
+    - ./gradlew buildFatJar
+  artifacts:
+    paths:
+      - ./build/libs/*.jar
+  tags:
+    - shell
+  when: always
