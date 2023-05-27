@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+00:45 [main] INFO  server.Server - Server started on port: 1234
+00:46 [Thread-0] INFO  server.Server - qwe has joined the server.
+00:46 [Thread-1] INFO  server.Server - Getting user list
+00:46 [Thread-1] INFO  server.Server - asd has joined the server.
+00:46 [Thread-0] INFO  server.Server - Getting user list
+00:46 [Thread-0] INFO  server.Server - Message from qwe to asd: 123 
+00:46 [Thread-1] INFO  server.Server - Getting messages from asd to qwe
+00:46 [Thread-1] INFO  server.Server - Message from asd to qwe: 432 
+00:46 [Thread-0] INFO  server.Server - Getting messages from qwe to asd
+01:02 [main] INFO  server.Server - Server started on port: 1234
+01:03 [main] INFO  server.Server - Server started on port: 1234
+11:48 [main] INFO  server.Server - Server started on port: 1234
+11:49 [Thread-0] ERROR server.Server - Error handling client request: Connection reset
+11:56 [main] INFO  server.Server - Server started on port: 1234
+12:29 [main] INFO  Server - Server started on port: 1234
+12:57 [main] INFO  Server - Server started on port: 1234
+12:57 [Thread-0] ERROR Server - Error handling client request: Connection reset
+=======
+14:17 [main] INFO  server.Server - Server started on port: 1234
+14:18 [Thread-0] INFO  server.Server - qwe has joined the server.
+14:18 [Thread-1] INFO  server.Server - asd has joined the server.
+14:18 [Thread-1] INFO  server.Server - Getting user list
+14:18 [Thread-0] INFO  server.Server - Getting user list
+14:18 [Thread-0] INFO  server.Server - Message from qwe to asd: 1 2 3 
+14:18 [Thread-1] INFO  server.Server - Getting messages from asd to qwe
+14:19 [main] INFO  server.Server - Server started on port: 1234
+14:19 [Thread-1] INFO  server.Server - qwe has joined the server.
+14:19 [Thread-0] INFO  server.Server - asd has joined the server.
+14:19 [Thread-1] INFO  server.Server - Getting user list
+14:20 [Thread-0] INFO  server.Server - Getting user list
+14:20 [Thread-1] INFO  server.Server - Message from qwe to asd: 1 2 3 
+14:20 [Thread-0] INFO  server.Server - Getting messages from asd to qwe
+17:13 [main] INFO  server.Server - Server started on port: 1234
+17:14 [Thread-0] INFO  server.Server - qwe has joined the server.
+17:14 [Thread-0] INFO  server.Server - Getting user list
+17:14 [Thread-1] INFO  server.Server - asd has joined the server.
+17:14 [Thread-0] INFO  server.Server - Getting user list
+17:14 [Thread-1] INFO  server.Server - Getting user list
+17:14 [Thread-0] INFO  server.Server - Message from qwe to asd: 1 2  3 
+17:14 [Thread-1] INFO  server.Server - Getting messages from asd to qwe
+17:14 [Thread-1] INFO  server.Server - Message from asd to qwe: 3 4 5 
+17:14 [Thread-0] INFO  server.Server - Getting messages from qwe to asd
+17:52 [main] INFO  server.Server - Server started on port: 1234
+17:52 [Thread-0] INFO  server.Server - Message from asd to qwe: 3 4 5 
+17:53 [main] INFO  server.Server - Server started on port: 1234
+17:55 [Thread-0] ERROR server.Server - Error handling client request: Connection reset
+18:04 [main] INFO  server.Server - Server started on port: 1234
+>>>>>>> origin/main

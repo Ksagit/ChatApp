@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mychat_gradle.iml" filepath="$PROJECT_DIR$/mychat_gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gui/mychat_gradle.gui.iml" filepath="$PROJECT_DIR$/.idea/modules/gui/mychat_gradle.gui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gui/mychat_gradle.gui.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gui/mychat_gradle.gui.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gui/mychat_gradle.gui.test.iml" filepath="$PROJECT_DIR$/.idea/modules/gui/mychat_gradle.gui.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mychat_gradle.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mychat_gradle.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/mychat_gradle.server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/mychat_gradle.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/mychat_gradle.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server/mychat_gradle.server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/mychat_gradle.server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/server/mychat_gradle.server.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mychat_gradle.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mychat_gradle.test.iml" />
+    </modules>
+  </component>
+</project>
