@@ -9,7 +9,7 @@ job1:
     - ./gradlew buildFatJar
   artifacts:
     paths:
-      - ./build/libs/*.jar
+      - ./gui/build/libs/*.jar
   tags:
     - shell
   when: always
@@ -22,7 +22,7 @@ job2:
     - ./gradlew buildFatJar
   artifacts:
     paths:
-      - ./build/libs/*.jar
+      - ./server/build/libs/*.jar
   tags:
     - shell
   when: always
