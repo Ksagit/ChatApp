@@ -24,3 +24,22 @@ tasks.test {
 application {
     mainClass.set("server.Main")
 }
+
+val log4jConfigDir = file("resources")
+
+tasks {
+    val copyLog4jConfig by creating(Copy::class) {
+        from(log4jConfigDir) {
+            include("server_log4j_config.xml")
+        }
+        into("$buildDir/resources/main")
+    }
+
+    withType<JavaExec> {
+        systemProperty("log4j.configurationFile", "$buildDir/resources/main/server_log4j_config.xml")
+    }
+
+    compileJava {
+        dependsOn(copyLog4jConfig)
+    }
+}

@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    java
     id("io.ktor.plugin") version "2.3.0"
     application
 }
@@ -23,4 +23,23 @@ tasks.test {
 
 application {
     mainClass.set("gui.Main")
+}
+
+val log4jConfigDir = file("resources")
+
+tasks {
+    val copyLog4jConfig by creating(Copy::class) {
+        from(log4jConfigDir) {
+            include("client_log4j_config.xml")
+        }
+        into("$buildDir/resources/main")
+    }
+
+    withType<JavaExec> {
+        systemProperty("log4j.configurationFile", "$buildDir/resources/main/client_log4j_config.xml")
+    }
+
+    compileJava {
+        dependsOn(copyLog4jConfig)
+    }
 }

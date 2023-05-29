@@ -13,7 +13,7 @@ public class Server {
     private final Map<String, Socket> onlineUsers = new HashMap<>();
 
     public void run(int port) {
-        String log4jConfigPath = getClass().getClassLoader().getResource("server_log4j_config.xml").getPath();
+        String log4jConfigPath = "resources/server_log4j_config.xml";
         Configurator.initialize(null, log4jConfigPath);
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             Logger.info("Server started on port: " + port);

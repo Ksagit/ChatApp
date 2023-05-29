@@ -27,7 +27,7 @@ public class Client {
             socket = new Socket(host, port);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
-            String log4jConfigPath = getClass().getClassLoader().getResource("client_log4j_config.xml").getPath();
+            String log4jConfigPath = "resources/client_log4j_config.xml";
             Configurator.initialize(null, log4jConfigPath);
             Logger.info("Connected to server.");
         } catch (IOException e) {
