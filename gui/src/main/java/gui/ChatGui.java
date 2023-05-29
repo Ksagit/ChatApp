@@ -15,7 +15,7 @@ public class ChatGui extends JFrame {
 
     public ChatGui(Client client) {
         JButton sendButton = new JButton("Send");
-        JButton searchButton = new JButton("Search (wip)");
+        JButton searchButton = new JButton("Search");
         JButton getUsers = new JButton("Refresh user list");
         JButton nickButton = new JButton("Enter");
         JButton getMessages = new JButton("Receive");
