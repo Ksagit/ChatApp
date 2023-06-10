@@ -1,5 +1,6 @@
 stages:
   - build
+  - test
 
 job1:
   stage: build
@@ -23,6 +24,17 @@ job2:
   artifacts:
     paths:
       - ./server/build/libs/*.jar
+  tags:
+    - shell
+  when: always
+
+job3:
+  stage: test
+  image: gradle:8.1.1-jdk17
+  script:
+    - chmod +x gradlew
+    - ./gradlew test
+  allow_failure: true
   tags:
     - shell
   when: always
