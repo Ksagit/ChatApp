@@ -1,0 +1,11 @@
+22:16 [main] INFO  Server - Server started on port: 1234
+22:33 [main] INFO  Server - Server started on port: 1234
+22:34 [main] INFO  Server - Server started on port: 1234
+22:35 [Thread-0] INFO  Server - qwe has joined the server.
+22:36 [Thread-1] INFO  Server - asd has joined the server.
+22:36 [Thread-0] INFO  Server - Getting user list
+22:36 [Thread-1] INFO  Server - Getting user list
+22:36 [Thread-0] INFO  Server - Message from qwe to asd: 123 
+22:36 [Thread-1] INFO  Server - Getting messages from asd to qwe
+22:36 [Thread-1] INFO  Server - Message from asd to qwe: 2456 
+22:36 [Thread-0] INFO  Server - Getting messages from qwe to asd

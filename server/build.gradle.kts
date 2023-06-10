@@ -15,6 +15,7 @@ dependencies {
     implementation("org.apache.logging.log4j:log4j-api:2.20.0")
     testImplementation(platform("org.junit:junit-bom:5.9.2"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+    testImplementation("org.mockito:mockito-core:3.12.4")
 }
 
 tasks.test {
@@ -35,8 +36,14 @@ tasks {
         into("$buildDir/resources/main")
     }
 
-    withType<JavaExec> {
+    val testJar by creating(Jar::class) {
+        from(sourceSets["test"].output)
+        archiveClassifier.set("tests")
+    }
+
+    withType<Test> {
         systemProperty("log4j.configurationFile", "$buildDir/resources/main/server_log4j_config.xml")
+        dependsOn(copyLog4jConfig)
     }
 
     compileJava {
