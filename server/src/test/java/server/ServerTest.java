@@ -57,8 +57,10 @@ class ServerTest {
 
         server.addUser("user1", new Socket());
         server.addUser("user2", new Socket());
+        server.handler("invalidCommand",socket);
+        String response = server.handler("invalidCommand",socket);
 
-        server.handler("invalidCommand", socket);
+        assertEquals("invalidCommand", response);
     }
 
     @Test
@@ -78,6 +80,7 @@ class ServerTest {
         assertArrayEquals(expectedUsers, actualUsers, "Users retrieved do not match expected users");
     }
 
+    // this is the test that is meant not to pass
     /*@Test
     void testAddMessage() throws IOException {
         Server server = new Server();

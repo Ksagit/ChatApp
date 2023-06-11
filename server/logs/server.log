@@ -64,3 +64,37 @@
 18:49 [Test worker] INFO  Server - user1 has joined the server.
 18:49 [Test worker] INFO  Server - user2 has joined the server.
 18:49 [Test worker] INFO  Server - user3 has joined the server.
+15:39 [Test worker] INFO  Server - user1 has joined the server.
+15:39 [Test worker] INFO  Server - user2 has joined the server.
+15:39 [Test worker] INFO  Server - user3 has joined the server.
+15:39 [Test worker] INFO  Server - user1 has joined the server.
+15:39 [Test worker] INFO  Server - user2 has joined the server.
+15:39 [Test worker] INFO  Server - user1 has joined the server.
+15:39 [Test worker] INFO  Server - user2 has joined the server.
+15:39 [Test worker] INFO  Server - user1 has joined the server.
+15:39 [Test worker] INFO  Server - user2 has joined the server.
+15:39 [Test worker] INFO  Server - user3 has joined the server.
+15:43 [Test worker] INFO  Server - user1 has joined the server.
+15:43 [Test worker] INFO  Server - user2 has joined the server.
+15:43 [Test worker] INFO  Server - user3 has joined the server.
+15:43 [Test worker] INFO  Server - user1 has joined the server.
+15:43 [Test worker] INFO  Server - user2 has joined the server.
+15:43 [Test worker] INFO  Server - user1 has joined the server.
+15:43 [Test worker] INFO  Server - user2 has joined the server.
+15:43 [Test worker] WARN  Server - Invalid command: invalidCommand
+15:43 [Test worker] WARN  Server - Invalid command: invalidCommand
+15:43 [Test worker] INFO  Server - user1 has joined the server.
+15:43 [Test worker] INFO  Server - user2 has joined the server.
+15:43 [Test worker] INFO  Server - user3 has joined the server.
+15:44 [Test worker] INFO  Server - user1 has joined the server.
+15:44 [Test worker] INFO  Server - user2 has joined the server.
+15:44 [Test worker] INFO  Server - user3 has joined the server.
+15:44 [Test worker] INFO  Server - user1 has joined the server.
+15:44 [Test worker] INFO  Server - user2 has joined the server.
+15:44 [Test worker] INFO  Server - user1 has joined the server.
+15:44 [Test worker] INFO  Server - user2 has joined the server.
+15:44 [Test worker] WARN  Server - Invalid command: invalidCommand
+15:44 [Test worker] WARN  Server - Invalid command: invalidCommand
+15:44 [Test worker] INFO  Server - user1 has joined the server.
+15:44 [Test worker] INFO  Server - user2 has joined the server.
+15:44 [Test worker] INFO  Server - user3 has joined the server.

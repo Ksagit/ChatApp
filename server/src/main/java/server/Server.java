@@ -3,6 +3,7 @@ package server;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.config.Configurator;
@@ -63,7 +64,7 @@ public class Server {
         return messages.toArray(new String[0]);
     }
 
-    public void handler(String command, Socket socket) throws IOException {
+    public String handler(String command, Socket socket) throws IOException {
         String[] tokens = command.split(" ");
         String action = tokens[0];
         //noinspection IfCanBeSwitch
@@ -78,7 +79,7 @@ public class Server {
         } else if (action.equals("addMessage")) {
             String sender = tokens[1];
             String recipient = tokens[2];
-            StringBuilder message= new StringBuilder();
+            StringBuilder message = new StringBuilder();
             for (int i = 3; i < tokens.length; i++) {
                 message.append(tokens[i]).append(" ");
             }
@@ -91,6 +92,8 @@ public class Server {
             objectOut.writeObject(messages);
         } else {
             Logger.warn("Invalid command: " + command);
+            return command;
         }
+        return action;
     }
 }

@@ -20,3 +20,13 @@
 22:36 [AWT-EventQueue-0] INFO  gui.Client - Receiving messages
 22:36 [AWT-EventQueue-0] INFO  gui.Client - Sent message from asd to qwe: 2456
 22:36 [AWT-EventQueue-0] INFO  gui.Client - Receiving messages
+15:45 [main] INFO  gui.Client - Connected to server.
+15:45 [main] INFO  gui.Client - Connected to server.
+15:45 [AWT-EventQueue-0] INFO  gui.Client - Joined server with username: qwe
+15:46 [AWT-EventQueue-0] INFO  gui.Client - Joined server with username: asd
+15:46 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
+15:46 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
+15:46 [AWT-EventQueue-0] INFO  gui.Client - Sent message from qwe to asd: 123
+15:46 [AWT-EventQueue-0] INFO  gui.Client - Receiving messages
+15:46 [AWT-EventQueue-0] INFO  gui.Client - Sent message from asd to qwe: 1234
+15:46 [AWT-EventQueue-0] INFO  gui.Client - Receiving messages
