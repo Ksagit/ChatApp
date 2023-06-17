@@ -34,7 +34,6 @@ job3:
   script:
     - chmod +x gradlew
     - ./gradlew test
-  allow_failure: true
   tags:
     - shell
   when: always
