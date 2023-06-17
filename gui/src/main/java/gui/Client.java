@@ -119,4 +119,9 @@ public class Client {
             retryConnection(this.host, this.port);
         }
     }
+
+    public void disconnectUser(String username) {
+        Logger.info("Disconnecting user: " + username);
+        out.println(String.format("%s %s","disconnectUser",username));
+    }
 }

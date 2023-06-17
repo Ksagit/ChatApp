@@ -64,10 +64,14 @@ public class Server {
         return messages.toArray(new String[0]);
     }
 
+    public void removeUser(String user, Socket socket) {
+        onlineUsers.remove(user, socket);
+        Logger.info(user + "has been removed from the server.");
+    }
+
     public String handler(String command, Socket socket) throws IOException {
         String[] tokens = command.split(" ");
         String action = tokens[0];
-        //noinspection IfCanBeSwitch
         if (action.equals("addUser")) {
             String username = tokens[1];
             addUser(username, socket);
@@ -90,6 +94,9 @@ public class Server {
             String[] messages = getMessages(user1, user2);
             ObjectOutputStream objectOut = new ObjectOutputStream(socket.getOutputStream());
             objectOut.writeObject(messages);
+        } else if (action.equals("disconnectUser")) {
+            String userToRemove = tokens[1];
+            removeUser(userToRemove, socket);
         } else {
             Logger.warn("Invalid command: " + command);
             return command;

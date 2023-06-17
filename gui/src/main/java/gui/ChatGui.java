@@ -19,6 +19,7 @@ public class ChatGui extends JFrame {
         JButton getUsers = new JButton("Refresh user list");
         JButton nickButton = new JButton("Enter");
         JButton getMessages = new JButton("Receive");
+        JButton disconnectButton = new JButton("Disconnect");
 
         chatHistory = new JTextArea(10, 30);
         chatHistory.setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -66,6 +67,7 @@ public class ChatGui extends JFrame {
         recipientPanel.add(recipientNickLabel, BorderLayout.NORTH);
 
         JPanel buttonPanel = new JPanel(new BorderLayout());
+        buttonPanel.add(disconnectButton, BorderLayout.SOUTH);
         buttonPanel.add(searchButton, BorderLayout.NORTH);
         buttonPanel.add(sendButton, BorderLayout.CENTER);
         buttonPanel.add(getUsers, BorderLayout.EAST);
@@ -116,6 +118,8 @@ public class ChatGui extends JFrame {
 
         nickButton.addActionListener(e -> client.joinServer(userNick.getText()));
 
+        disconnectButton.addActionListener(e -> client.disconnectUser(userNick.getText()));
+
         getMessages.addActionListener(e -> {
             try {
                 client.refreshMessages(chatHistory, recipientNick.getText());
@@ -123,6 +127,8 @@ public class ChatGui extends JFrame {
                 throw new RuntimeException(ex);
             }
         });
+
+
 
         setTitle("mychat");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
