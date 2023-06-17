@@ -3,6 +3,7 @@ package gui;
 import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.config.Configurator;
@@ -98,15 +99,20 @@ public class Client {
 
     public void searchMessage(String to, String message, JTextArea searchHistory) throws IOException {
         try {
-            //leave this for later
+            searchHistory.setText("");
             Logger.info("Searching for messages from " + this.username + " to " + to + ": " + message);
-            out.println(String.format("%s %s %s %s", "getMessages", this.username, to, message));
+            out.println(String.format("%s %s %s", "getMessages", this.username, to));
             ObjectInputStream objectIn = new ObjectInputStream(socket.getInputStream());
             String[] messages = (String[]) objectIn.readObject();
-            searchHistory.append(String.format("%s %s\n", this.username, String.join(", ", messages)));
-            String response = in.readLine();
-            if (response.equals("ok")) {
-                searchHistory.append(String.format("%s %s\n", this.username, String.join(", ", messages)));
+            boolean foundMessages = false;
+            for (String word : messages) {
+                if (word.contains(message)) {
+                    searchHistory.append(word + '\n');
+                    foundMessages = true;
+                }
+            }
+            if (!foundMessages) {
+                searchHistory.setText("No messages found.");
             }
         } catch (Exception e) {
             Logger.error("Error searching for messages", e);

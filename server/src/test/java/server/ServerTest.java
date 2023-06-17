@@ -14,7 +14,6 @@ class ServerTest {
 
     @Mock
     private Socket mockSocket;
-
     public ServerTest() {
         MockitoAnnotations.openMocks(this);
     }
@@ -24,7 +23,6 @@ class ServerTest {
         Server server = new Server();
         server.addUser("user1", new Socket());
         server.addUser("user2", new Socket());
-
         String[] users = server.getUsers();
         List<String> userList = Arrays.asList(users);
         assertEquals(2, userList.size());
@@ -36,12 +34,9 @@ class ServerTest {
     void testHandler_ValidCommand() throws IOException {
         Server server = new Server();
         Socket socket = new Socket();
-
         server.addUser("user1", new Socket());
         server.addUser("user2", new Socket());
-
         server.handler("addUser user3", socket);
-
         String[] users = server.getUsers();
         List<String> userList = Arrays.asList(users);
         assertEquals(3, userList.size());
@@ -54,12 +49,10 @@ class ServerTest {
     void testHandler_InvalidCommand() throws IOException {
         Server server = new Server();
         Socket socket = new Socket();
-
         server.addUser("user1", new Socket());
         server.addUser("user2", new Socket());
         server.handler("invalidCommand",socket);
         String response = server.handler("invalidCommand",socket);
-
         assertEquals("invalidCommand", response);
     }
 
@@ -69,28 +62,19 @@ class ServerTest {
         server.addUser("user1", mockSocket);
         server.addUser("user2", mockSocket);
         server.addUser("user3", mockSocket);
-
         when(mockSocket.isClosed()).thenReturn(false);
         when(mockSocket.isInputShutdown()).thenReturn(false);
         when(mockSocket.isOutputShutdown()).thenReturn(false);
-
         String[] expectedUsers = {"user1", "user2", "user3"};
         String[] actualUsers = server.getUsers();
-
         assertArrayEquals(expectedUsers, actualUsers, "Users retrieved do not match expected users");
     }
 
-    // this is the test that is meant not to pass
-    /*@Test
-    void testAddMessage() throws IOException {
+    @Test
+    void testAddMessage_NotExistingUsers() throws IOException {
         Server server = new Server();
-        server.addUser("sender", new Socket());
-        server.addUser("recipient", new Socket());
-
-        server.addMessage("sender", "recipient", "Hello!");
-
-        String[] messages = server.getMessages("sender", "recipient");
-        assertEquals(1, messages.length);
-        assertEquals("sender: Hello!", messages[0]);
-    }*/
+        assertThrows(NullPointerException.class, () -> {
+            server.addMessage("sender", "recipient", "Hello!");
+        });
+    }
 }
