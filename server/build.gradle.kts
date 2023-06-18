@@ -36,14 +36,8 @@ tasks {
         into("$buildDir/resources/main")
     }
 
-    val testJar by creating(Jar::class) {
-        from(sourceSets["test"].output)
-        archiveClassifier.set("tests")
-    }
-
-    withType<Test> {
+    withType<JavaExec> {
         systemProperty("log4j.configurationFile", "$buildDir/resources/main/server_log4j_config.xml")
-        dependsOn(copyLog4jConfig)
     }
 
     compileJava {

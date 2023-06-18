@@ -1,14 +1,1 @@
-13:36 [main] INFO  gui.Client - Connected to server.
-13:37 [main] INFO  gui.Client - Connected to server.
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Joined server with username: qwe
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Disconnecting user: qwe
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Joined server with username: qwe
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Disconnecting user: qwe
-13:37 [AWT-EventQueue-0] INFO  gui.Client - Refreshing user list
+12:54 [main] INFO  gui.Client - Connected to server.
