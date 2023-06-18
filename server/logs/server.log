@@ -1,1 +1,3 @@
 12:54 [main] INFO  Server - Server started on port: 1234
+12:57 [main] INFO  Server - Server started on port: 1234
+12:58 [Thread-0] ERROR Server - Error handling client request: Connection reset
