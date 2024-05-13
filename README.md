@@ -18,5 +18,5 @@ To run the project use:
 
 ```bash
 java -jar out/artifacts/mychat_gui/mychat.jar
-java -jar out/artifacts/mychat_gui/mychat.jar
+java -jar out/artifacts/mychat_server/mychat.jar
 ```
